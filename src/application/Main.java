@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import application.classes.StyleManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -39,4 +41,14 @@ public class Main extends Application {
 		// controllo sull'esistenza del file
 
 	}
+
+	public void changeScene(String fxml) throws IOException{
+		Stage stg= new Stage();
+		Parent root = FXMLLoader.load(getClass().getResource(fxml));
+		Scene scene = new Scene(root);
+		stg.setScene(scene);
+		stg.show();
+
+	}
+
 }

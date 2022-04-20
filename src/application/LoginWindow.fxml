@@ -63,7 +63,7 @@
                   <HBox alignment="CENTER">
                      <children>
                         <Label text="Si no login" />
-                        <Hyperlink text="Registrati" />
+                        <Hyperlink fx:id="reg_link" onAction="#SignUpWind" text="Registrati" />
                      </children>
                   </HBox>
                   <Button mnemonicParsing="false" onAction="#Login" text="Accedi">
