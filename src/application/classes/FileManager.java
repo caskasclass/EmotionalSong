@@ -37,30 +37,12 @@ public class FileManager {
     try {
       FileInputStream fileInputStream = new FileInputStream(PATH);
       ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-      users = (ArrayList<User>) objectInputStream.readObject();//fixare sta merda di warning 
-      /*
-      * Ho trovato questo su internet!
-      *
-      *
-      * Object obj = ois.readObject();
-      * Check it's an ArrayList
-      * if (obj instanceof ArrayList<?>) {
-      *  // Get the List.
-      * ArrayList<?> al = (ArrayList<?>) obj;
-      *  if (al.size() > 0) {
-      *    // Iterate.
-      *    for (int i = 0; i < al.size(); i++) {
-      *      // Still not enough for a type.
-      *      Object o = al.get(i);
-      *      if (o instanceof MyVariable) {
-      *        // Here we go!
-      *       MyVariable v = (MyVariable) o;
-      *        // use v.
-      *      }
-      *    }
-      *  }
-      * }
-      */
+      Object obj = objectInputStream.readObject();
+      if (obj instanceof ArrayList<?>){
+        ArrayList<?> al= (ArrayList<?>) obj;
+        users= castList(al);
+      }
+      
       objectInputStream.close();
     } catch (ClassNotFoundException e) {
       e.printStackTrace();
@@ -68,6 +50,17 @@ public class FileManager {
       IOe.printStackTrace();
     }
     return users;
+  }
+
+  private static ArrayList<User> castList(ArrayList<?> al){
+
+    ArrayList<User> array= new ArrayList<User>();
+    for (Object obj : al) {
+      if( obj instanceof User){
+        array.add((User)obj);
+      } 
+    }
+    return array;
   }
   /*
    * public static void ReadFile() {

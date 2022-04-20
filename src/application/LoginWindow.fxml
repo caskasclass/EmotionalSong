@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerH">
    <children>
       <GridPane id="mygrid" gridLinesVisible="true" prefHeight="450.0" prefWidth="700.0">
         <columnConstraints>
@@ -41,7 +41,7 @@
                               <Label text="Username o Email" />
                            </children>
                         </Pane>
-                        <TextField fx:id="user_emial_field">
+                        <TextField fx:id="ue_field">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
@@ -51,7 +51,7 @@
                               <Label text="Password" />
                            </children>
                         </Pane>
-                        <PasswordField fx:id="password_field" />
+                        <PasswordField fx:id="passwd_field" />
                      </children>
                      <VBox.margin>
                         <Insets />
@@ -66,16 +66,24 @@
                         <Hyperlink text="Registrati" />
                      </children>
                   </HBox>
-                  <Button fx:id="btn_login" mnemonicParsing="false" text="Accedi">
+                  <Button mnemonicParsing="false" onAction="#Login" text="Accedi">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
+                  <Label fx:id="lb_allert">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
             <ImageView fitWidth="250.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../../img/logo.jpg" />
+                  <Image url="@../assets/img/logo.jpg" />
                </image>
             </ImageView>
          </children>
