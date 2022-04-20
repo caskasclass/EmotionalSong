@@ -18,7 +18,7 @@ public class Main extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("fxml/LoginWindow.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(stylemanager.mainStyle());
-			primaryStage.setTitle("EmotionalSong");
+			primaryStage.setTitle("EmotiolSong");
 			primaryStage.setResizable(false);
 			Image icon = new Image(getClass().getResource("/assets/img/icon.png").toString());
 			System.out.println(getClass().getResource("/assets/img/icon.png").toString());
