@@ -1,8 +1,9 @@
-package application;
+package application.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
+import application.Main;
 import application.classes.FileManager;
 import application.classes.User;
 import javafx.event.ActionEvent;

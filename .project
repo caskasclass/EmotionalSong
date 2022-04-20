@@ -31,10 +31,4 @@
 			</matcher>
 		</filter>
 	</filteredResources>
-	<variableList>
-		<variable>
-			<name>RESOURCES</name>
-			<value>file:/Users/caska/Desktop/Project%20/EmotionalSong/src/assets</value>
-		</variable>
-	</variableList>
 </projectDescription>

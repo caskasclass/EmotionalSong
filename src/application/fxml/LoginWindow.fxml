@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerH">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ControllerH">
    <children>
       <GridPane id="mygrid" gridLinesVisible="true" prefHeight="450.0" prefWidth="700.0">
         <columnConstraints>
@@ -63,10 +63,10 @@
                   <HBox alignment="CENTER">
                      <children>
                         <Label text="Si no login" />
-                        <Hyperlink fx:id="reg_link" onAction="#SignUpWind" text="Registrati" />
+                        <Hyperlink fx:id="reg_link" text="Registrati" />
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" onAction="#Login" text="Accedi">
+                  <Button mnemonicParsing="false" text="Accedi">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -83,7 +83,7 @@
             </VBox>
             <ImageView fitWidth="250.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../assets/img/logo.jpg" />
+                  <Image url="@../../assets/img/logo.jpg" />
                </image>
             </ImageView>
          </children>

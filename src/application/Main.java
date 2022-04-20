@@ -15,12 +15,13 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		StyleManager stylemanager = new StyleManager();
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("LoginWindow.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("fxml/LoginWindow.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(stylemanager.mainStyle());
 			primaryStage.setTitle("EmotionalSong");
 			primaryStage.setResizable(false);
 			Image icon = new Image(getClass().getResource("/assets/img/icon.png").toString());
+			System.out.println(getClass().getResource("/assets/img/icon.png").toString());
 			primaryStage.getIcons().add(icon);
 			System.out.println((getClass().getResource("")).toString());
 			primaryStage.setScene(scene);

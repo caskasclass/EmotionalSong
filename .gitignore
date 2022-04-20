@@ -1,1 +1,6 @@
 bin/
+.classpath
+.DS_Store
+build.fxbuild
+.project
+.settings/
